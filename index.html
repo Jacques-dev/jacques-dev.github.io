@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Les outils web de Jacques Tellier : écriture de scénarios et autres applications.">
+  <title>jtellier.com — Outils</title>
+  <style>
+    :root {
+      --bg: #f7f6f3;
+      --surface: #ffffff;
+      --text: #1c1b18;
+      --muted: #6e6a60;
+      --accent: #8a5a2b;
+      --border: #e4e1da;
+      --shadow: 0 1px 2px rgba(28, 27, 24, .05), 0 8px 24px rgba(28, 27, 24, .07);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #171614;
+        --surface: #201f1c;
+        --text: #ece9e2;
+        --muted: #9d988c;
+        --accent: #d9a45f;
+        --border: #35332e;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #171614;
+      --surface: #201f1c;
+      --text: #ece9e2;
+      --muted: #9d988c;
+      --accent: #d9a45f;
+      --border: #35332e;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    header {
+      padding: 72px 0 40px;
+    }
+    .site-name {
+      font-size: 14px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 16px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+    }
+    h1 {
+      font-size: clamp(32px, 6vw, 48px);
+      font-weight: 400;
+      margin: 0 0 12px;
+      letter-spacing: -.01em;
+    }
+    .lede {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 48ch;
+      margin: 0;
+    }
+    main { padding: 8px 0 64px; }
+    .section-title {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 32px 0 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    .card h2 {
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0 0 8px;
+    }
+    .card h2 .arrow {
+      color: var(--accent);
+      transition: transform .15s ease;
+      display: inline-block;
+    }
+    .card:hover h2 .arrow { transform: translateX(3px); }
+    .card p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+    }
+    .card .tag {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 12px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+    .card.soon {
+      border-style: dashed;
+      box-shadow: none;
+      background: transparent;
+    }
+    .card.soon:hover { transform: none; border-color: var(--border); }
+    .card.soon h2, .card.soon p { color: var(--muted); }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0 48px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="site-name">jtellier.com</p>
+      <h1>Jacques Tellier</h1>
+      <p class="lede">Des outils web que je construis pour écrire, organiser et créer — rangés ici, sous un même toit.</p>
+    </header>
+    <main>
+      <p class="section-title">Outils</p>
+      <div class="grid">
+        <a class="card" href="/scenariste/">
+          <h2>Scénariste <span class="arrow">→</span></h2>
+          <p>Écriture de scénarios au format professionnel : éditeur intelligent, vérificateur de règles, aperçu paginé, import PDF et export Fountain.</p>
+          <span class="tag">Écriture</span>
+        </a>
+        <div class="card soon">
+          <h2>À venir</h2>
+          <p>Le prochain outil trouvera sa place ici.</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="https://github.com/Jacques-dev">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>
