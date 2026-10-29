@@ -40,7 +40,7 @@
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: Georgia, 'Times New Roman', serif;
+      font-family: ui-sans-serif, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
@@ -58,11 +58,10 @@
       text-transform: uppercase;
       color: var(--muted);
       margin: 0 0 16px;
-      font-family: ui-sans-serif, system-ui, sans-serif;
     }
     h1 {
       font-size: clamp(32px, 6vw, 48px);
-      font-weight: 400;
+      font-weight: 600;
       margin: 0 0 12px;
       letter-spacing: -.01em;
     }
@@ -74,7 +73,6 @@
     }
     main { padding: 8px 0 64px; }
     .section-title {
-      font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: 13px;
       letter-spacing: .14em;
       text-transform: uppercase;
@@ -103,7 +101,7 @@
     }
     .card h2 {
       font-size: 22px;
-      font-weight: 400;
+      font-weight: 600;
       margin: 0 0 8px;
     }
     .card h2 .arrow {
@@ -116,13 +114,11 @@
       margin: 0;
       font-size: 15px;
       color: var(--muted);
-      font-family: ui-sans-serif, system-ui, sans-serif;
     }
     .card .tag {
       display: inline-block;
       margin-top: 14px;
       font-size: 12px;
-      font-family: ui-sans-serif, system-ui, sans-serif;
       color: var(--accent);
       border: 1px solid var(--border);
       border-radius: 999px;
@@ -135,15 +131,6 @@
     }
     .card.soon:hover { transform: none; border-color: var(--border); }
     .card.soon h2, .card.soon p { color: var(--muted); }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 24px 0 48px;
-      font-family: ui-sans-serif, system-ui, sans-serif;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    footer a { color: var(--muted); }
-    footer a:hover { color: var(--accent); }
   </style>
 </head>
 <body>
@@ -167,9 +154,6 @@
         </div>
       </div>
     </main>
-    <footer>
-      <a href="https://github.com/Jacques-dev">GitHub</a>
-    </footer>
   </div>
 </body>
 </html>
